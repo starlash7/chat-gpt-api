@@ -9,15 +9,17 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header className="px-2 py-4 flex justify-center gap-8 shadow-md">
+    <header className="bg-green-300 p-4 flex justify-center items-center shadow-md">
       <Link
-        className={`link-style ${location.pathname === "/" && "text-gray-900"}`}
+        className={`text-lg font-bold text-gray-900 mx-4 ${
+          location.pathname === "/" && "text-gray-900"
+        }`}
         to="/"
       >
         질문하기
       </Link>
       <Link
-        className={`link-style ${
+        className={`text-lg font-bold text-gray-900 mx-4 ${
           location.pathname === "/chat-list" && "text-gray-900"
         }`}
         to="/chat-list"
